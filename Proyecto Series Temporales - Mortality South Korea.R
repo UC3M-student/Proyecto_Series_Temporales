@@ -25,16 +25,16 @@ y_52<-ts(years_52)
 y_53<-ts(years_53)
 
 
-autoplot(y)
-ggAcf(y) #FAS
-ggPacf(y) #FAC 
+autoplot(y_53)
+ggAcf(y_46) #FAS
+ggPacf(y_46) #FAC 
 
-y_dif<-diff(y, differences = 2) 
+y_dif_45<-diff(y_49, differences = 2) 
 autoplot(y_dif)
 
-adf.test(y) #H1 = Estacionario 
-kpss.test(y,null = "Level") #H1: NO ESTACIONARO
-pp.test(y) # H1: estacionario
+adf.test(y_49) #H1 = Estacionario 
+kpss.test(y_49,null = "Level") #H1: NO ESTACIONARO
+pp.test(y_49) # H1: estacionario
 
 adf.test(y_dif) #H1 = Estacionario 
 kpss.test(y_dif,null = "Level") #H1: NO ESTACIONARO
@@ -42,16 +42,23 @@ pp.test(y_dif) # H1: estacionario
 ggAcf(y_dif) #FAS
 ggPacf(y_dif)
 
-auto.arima(y)
+auto.arima(y_49)
+
+ts.plot(y_45,y_46,y_47,y_48,y_49,y_50,y_51,y_52,y_53,gpars = list(col = rainbow(9)))
+
+y_dif_45<-diff(y_45, differences = 2) 
+y_dif_46<-diff(y_46, differences = 2) 
+y_dif_47<-diff(y_47, differences = 2) 
+y_dif_48<-diff(y_48, differences = 2) 
+y_dif_49<-diff(y_49, differences = 2) 
+y_dif_50<-diff(y_50, differences = 2) 
+y_dif_51<-diff(y_51, differences = 2) 
+y_dif_52<-diff(y_52, differences = 2) 
+y_dif_53<-diff(y_53, differences = 2) 
 
 
+ts.plot(y_45,y_46,y_47,y_48,y_49,y_50,y_51,y_52,y_53,gpars = list(col = rainbow(9)))
 
-
-
-
-
-
-
-
+ts.plot(y_dif_45,y_dif_46,y_dif_47,y_dif_48,y_dif_49,y_dif_50,y_dif_51,y_dif_52,y_dif_53,gpars = list(col = rainbow(9)))
 
 
