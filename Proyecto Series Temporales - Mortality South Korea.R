@@ -44,12 +44,14 @@ ggPacf(y_dif)
 
 auto.arima(y)
 
-#FSDFSFDDS
-
-#flskjdfsdjfsdfsd asdasdas
 
 
-#dasdasdas
+
+
+
+
+
+
 
 
 
