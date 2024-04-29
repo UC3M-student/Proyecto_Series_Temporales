@@ -43,3 +43,5 @@ ggAcf(y_dif) #FAS
 ggPacf(y_dif)
 
 auto.arima(y)
+
+#FSDFSFDDS
